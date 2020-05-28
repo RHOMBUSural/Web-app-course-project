@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateOrdersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_idOrder}" for="idOrder" />
+                    <h:inputText id="idOrder" value="#{ordersController.selected.idOrder}" title="#{bundle.CreateOrdersTitle_idOrder}" required="true" requiredMessage="#{bundle.CreateOrdersRequiredMessage_idOrder}"/>
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_countProducts}" for="countProducts" />
+                    <h:inputText id="countProducts" value="#{ordersController.selected.countProducts}" title="#{bundle.CreateOrdersTitle_countProducts}" required="true" requiredMessage="#{bundle.CreateOrdersRequiredMessage_countProducts}"/>
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_shippingDate}" for="shippingDate" />
+                    <h:inputText id="shippingDate" value="#{ordersController.selected.shippingDate}" title="#{bundle.CreateOrdersTitle_shippingDate}" >
+                        <f:convertDateTime pattern="dd/MM/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_noOrders}" for="noOrders" />
+                    <h:inputText id="noOrders" value="#{ordersController.selected.noOrders}" title="#{bundle.CreateOrdersTitle_noOrders}" />
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_idPeople}" for="idPeople" />
+                    <h:selectOneMenu id="idPeople" value="#{ordersController.selected.idPeople}" title="#{bundle.CreateOrdersTitle_idPeople}" required="true" requiredMessage="#{bundle.CreateOrdersRequiredMessage_idPeople}">
+                        <f:selectItems value="#{peopleController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateOrdersLabel_idProduct}" for="idProduct" />
+                    <h:selectOneMenu id="idProduct" value="#{ordersController.selected.idProduct}" title="#{bundle.CreateOrdersTitle_idProduct}" required="true" requiredMessage="#{bundle.CreateOrdersRequiredMessage_idProduct}">
+                        <f:selectItems value="#{productController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{ordersController.create}" value="#{bundle.CreateOrdersSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{ordersController.prepareList}" value="#{bundle.CreateOrdersShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateOrdersIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

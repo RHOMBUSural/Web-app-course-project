@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewOrdersTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewOrdersLabel_idOrder}"/>
+                    <h:outputText value="#{ordersController.selected.idOrder}" title="#{bundle.ViewOrdersTitle_idOrder}"/>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_countProducts}"/>
+                    <h:outputText value="#{ordersController.selected.countProducts}" title="#{bundle.ViewOrdersTitle_countProducts}"/>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_shippingDate}"/>
+                    <h:outputText value="#{ordersController.selected.shippingDate}" title="#{bundle.ViewOrdersTitle_shippingDate}">
+                        <f:convertDateTime pattern="dd/MM/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_noOrders}"/>
+                    <h:outputText value="#{ordersController.selected.noOrders}" title="#{bundle.ViewOrdersTitle_noOrders}"/>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_idPeople}"/>
+                    <h:outputText value="#{ordersController.selected.idPeople}" title="#{bundle.ViewOrdersTitle_idPeople}"/>
+                    <h:outputText value="#{bundle.ViewOrdersLabel_idProduct}"/>
+                    <h:outputText value="#{ordersController.selected.idProduct}" title="#{bundle.ViewOrdersTitle_idProduct}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{ordersController.destroyAndView}" value="#{bundle.ViewOrdersDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewOrdersEditLink}"/>
+                <br />
+                <h:commandLink action="#{ordersController.prepareCreate}" value="#{bundle.ViewOrdersCreateLink}" />
+                <br />
+                <h:commandLink action="#{ordersController.prepareList}" value="#{bundle.ViewOrdersShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewOrdersIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

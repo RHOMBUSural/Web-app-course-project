@@ -1,0 +1,1972 @@
+[2020-05-09T21:51:43.204+0500] [glassfish 5.0] [SEVERE] [] [javax.enterprise.system.core] [tid: _ThreadID=50 _ThreadName=admin-listener(5)] [timeMillis: 1589043103204] [levelValue: 1000] [[
+  Exception while preparing the app : Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.0.v20170811-d680af5): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+Error Code: 0
+Local Exception Stack: 
+Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.0.v20170811-d680af5): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+Error Code: 0
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:316)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:147)
+	at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:170)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:228)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:254)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:757)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:216)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getDatabaseSession(EntityManagerFactoryDelegate.java:194)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.getDatabaseSession(EntityManagerFactoryImpl.java:540)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:385)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:313)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.loadPU(PersistenceUnitLoader.java:199)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.<init>(PersistenceUnitLoader.java:107)
+	at org.glassfish.persistence.jpa.JPADeployer$1.visitPUD(JPADeployer.java:223)
+	at org.glassfish.persistence.jpa.JPADeployer$PersistenceUnitDescriptorIterator.iteratePUDs(JPADeployer.java:510)
+	at org.glassfish.persistence.jpa.JPADeployer.createEMFs(JPADeployer.java:230)
+	at org.glassfish.persistence.jpa.JPADeployer.prepare(JPADeployer.java:168)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.prepareModule(ApplicationLifecycle.java:925)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:434)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at org.glassfish.deployment.admin.ReDeployCommand.execute(ReDeployCommand.java:131)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:534)
+	at com.sun.enterprise.v3.admin.AdminAdapter.onMissingResource(AdminAdapter.java:224)
+	at org.glassfish.grizzly.http.server.StaticHttpHandlerBase.service(StaticHttpHandlerBase.java:190)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:463)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:168)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:206)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:180)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:242)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:539)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:121)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:135)
+	... 71 more
+Caused by: javax.resource.spi.ResourceAllocationException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:319)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:196)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:166)
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:115)
+	... 72 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:103)
+	at com.sun.enterprise.resource.pool.ConnectionPool.addResource(ConnectionPool.java:282)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResourceAndAddToPool(ConnectionPool.java:1511)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResources(ConnectionPool.java:943)
+	at com.sun.enterprise.resource.pool.ConnectionPool.initPool(ConnectionPool.java:230)
+	at com.sun.enterprise.resource.pool.ConnectionPool.internalGetResource(ConnectionPool.java:514)
+	at com.sun.enterprise.resource.pool.ConnectionPool.getResource(ConnectionPool.java:381)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResourceFromPool(PoolManagerImpl.java:245)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResource(PoolManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.getResource(ConnectionManagerImpl.java:360)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:307)
+	... 76 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:923)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResource(ConnectionPool.java:1188)
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:98)
+	... 86 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.allocator.LocalTxConnectorAllocator.createResource(LocalTxConnectorAllocator.java:110)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:906)
+	... 88 more
+Caused by: javax.resource.spi.ResourceAllocationException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.gjc.spi.DMManagedConnectionFactory.createManagedConnection(DMManagedConnectionFactory.java:166)
+	at com.sun.enterprise.resource.allocator.LocalTxConnectorAllocator.createResource(LocalTxConnectorAllocator.java:87)
+	... 89 more
+]]
+
+[2020-05-09T21:51:57.583+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117583] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:51:57.639+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117639] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:51:57.675+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117675] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:51:57.681+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117681] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:51:57.803+0500] [glassfish 5.0] [INFO] [] [org.eclipse.persistence.session./file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117803] [levelValue: 800] [[
+  EclipseLink, version: Eclipse Persistence Services - 2.7.0.v20170811-d680af5]]
+
+[2020-05-09T21:51:57.808+0500] [glassfish 5.0] [SEVERE] [jdbc.exc_create_mc] [javax.enterprise.resource.resourceadapter.com.sun.gjc.spi] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117808] [levelValue: 1000] [[
+  RAR5110 : Error creating managed Connection with user and password : {0}
+org.postgresql.util.PSQLException: ВАЖНО: база данных "bd_KP" не существует
+	at org.postgresql.core.v3.ConnectionFactoryImpl.readStartupMessages(ConnectionFactoryImpl.java:730)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:231)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:67)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:212)
+	at org.postgresql.Driver.makeConnection(Driver.java:407)
+	at org.postgresql.Driver.connect(Driver.java:275)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at com.sun.gjc.spi.DMManagedConnectionFactory.createManagedConnection(DMManagedConnectionFactory.java:161)
+	at com.sun.enterprise.resource.allocator.LocalTxConnectorAllocator.createResource(LocalTxConnectorAllocator.java:87)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:906)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResource(ConnectionPool.java:1188)
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:98)
+	at com.sun.enterprise.resource.pool.ConnectionPool.addResource(ConnectionPool.java:282)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResourceAndAddToPool(ConnectionPool.java:1511)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResources(ConnectionPool.java:943)
+	at com.sun.enterprise.resource.pool.ConnectionPool.initPool(ConnectionPool.java:230)
+	at com.sun.enterprise.resource.pool.ConnectionPool.internalGetResource(ConnectionPool.java:514)
+	at com.sun.enterprise.resource.pool.ConnectionPool.getResource(ConnectionPool.java:381)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResourceFromPool(PoolManagerImpl.java:245)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResource(PoolManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.getResource(ConnectionManagerImpl.java:360)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:307)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:196)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:166)
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:115)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:135)
+	at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:170)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:228)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:254)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:757)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:216)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getDatabaseSession(EntityManagerFactoryDelegate.java:194)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.getDatabaseSession(EntityManagerFactoryImpl.java:540)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:385)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:313)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.loadPU(PersistenceUnitLoader.java:199)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.<init>(PersistenceUnitLoader.java:107)
+	at org.glassfish.persistence.jpa.JPADeployer$1.visitPUD(JPADeployer.java:223)
+	at org.glassfish.persistence.jpa.JPADeployer$PersistenceUnitDescriptorIterator.iteratePUDs(JPADeployer.java:510)
+	at org.glassfish.persistence.jpa.JPADeployer.createEMFs(JPADeployer.java:230)
+	at org.glassfish.persistence.jpa.JPADeployer.prepare(JPADeployer.java:168)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.prepareModule(ApplicationLifecycle.java:925)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:434)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:534)
+	at com.sun.enterprise.v3.admin.AdminAdapter.onMissingResource(AdminAdapter.java:224)
+	at org.glassfish.grizzly.http.server.StaticHttpHandlerBase.service(StaticHttpHandlerBase.java:190)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:463)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:168)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:206)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:180)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:242)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:539)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-05-09T21:51:57.811+0500] [glassfish 5.0] [WARNING] [poolmgr.create_resource_error] [javax.enterprise.resource.resourceadapter.com.sun.enterprise.resource.allocator] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117811] [levelValue: 900] [[
+  RAR5038:Unexpected exception while creating resource for pool poolKP. Exception : javax.resource.spi.ResourceAllocationException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует]]
+
+[2020-05-09T21:51:57.811+0500] [glassfish 5.0] [WARNING] [poolmgr.get_connection_failure] [javax.enterprise.resource.resourceadapter.com.sun.enterprise.connectors] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117811] [levelValue: 900] [[
+  RAR5117 : Failed to obtain/create connection from connection pool [ poolKP ]. Reason : com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует]]
+
+[2020-05-09T21:51:57.811+0500] [glassfish 5.0] [WARNING] [jdbc.exc_get_conn] [javax.enterprise.resource.resourceadapter.com.sun.gjc.spi] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117811] [levelValue: 900] [[
+  RAR5114 : Error allocating connection : [Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует]]]
+
+[2020-05-09T21:51:57.812+0500] [glassfish 5.0] [SEVERE] [] [org.eclipse.persistence.session./file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU.ejb] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117812] [levelValue: 1000] [[
+  
+Local Exception Stack: 
+Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.0.v20170811-d680af5): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+Error Code: 0
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:316)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:147)
+	at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:170)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:228)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:254)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:757)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:216)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getDatabaseSession(EntityManagerFactoryDelegate.java:194)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.getDatabaseSession(EntityManagerFactoryImpl.java:540)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:385)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:313)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.loadPU(PersistenceUnitLoader.java:199)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.<init>(PersistenceUnitLoader.java:107)
+	at org.glassfish.persistence.jpa.JPADeployer$1.visitPUD(JPADeployer.java:223)
+	at org.glassfish.persistence.jpa.JPADeployer$PersistenceUnitDescriptorIterator.iteratePUDs(JPADeployer.java:510)
+	at org.glassfish.persistence.jpa.JPADeployer.createEMFs(JPADeployer.java:230)
+	at org.glassfish.persistence.jpa.JPADeployer.prepare(JPADeployer.java:168)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.prepareModule(ApplicationLifecycle.java:925)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:434)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:534)
+	at com.sun.enterprise.v3.admin.AdminAdapter.onMissingResource(AdminAdapter.java:224)
+	at org.glassfish.grizzly.http.server.StaticHttpHandlerBase.service(StaticHttpHandlerBase.java:190)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:463)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:168)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:206)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:180)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:242)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:539)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:121)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:135)
+	... 56 more
+Caused by: javax.resource.spi.ResourceAllocationException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:319)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:196)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:166)
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:115)
+	... 57 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:103)
+	at com.sun.enterprise.resource.pool.ConnectionPool.addResource(ConnectionPool.java:282)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResourceAndAddToPool(ConnectionPool.java:1511)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResources(ConnectionPool.java:943)
+	at com.sun.enterprise.resource.pool.ConnectionPool.initPool(ConnectionPool.java:230)
+	at com.sun.enterprise.resource.pool.ConnectionPool.internalGetResource(ConnectionPool.java:514)
+	at com.sun.enterprise.resource.pool.ConnectionPool.getResource(ConnectionPool.java:381)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResourceFromPool(PoolManagerImpl.java:245)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResource(PoolManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.getResource(ConnectionManagerImpl.java:360)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:307)
+	... 61 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:923)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResource(ConnectionPool.java:1188)
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:98)
+	... 71 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.allocator.LocalTxConnectorAllocator.createResource(LocalTxConnectorAllocator.java:110)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:906)
+	... 73 more
+Caused by: javax.resource.spi.ResourceAllocationException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.gjc.spi.DMManagedConnectionFactory.createManagedConnection(DMManagedConnectionFactory.java:166)
+	at com.sun.enterprise.resource.allocator.LocalTxConnectorAllocator.createResource(LocalTxConnectorAllocator.java:87)
+	... 74 more
+]]
+
+[2020-05-09T21:51:57.814+0500] [glassfish 5.0] [SEVERE] [] [javax.enterprise.system.core] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117814] [levelValue: 1000] [[
+  Exception while invoking class org.glassfish.persistence.jpa.JPADeployer prepare method]]
+
+[2020-05-09T21:51:57.818+0500] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=46 _ThreadName=Thread-9] [timeMillis: 1589043117818] [levelValue: 1000] [[
+  javax.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.0.v20170811-d680af5): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+Error Code: 0
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:844)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:216)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getDatabaseSession(EntityManagerFactoryDelegate.java:194)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.getDatabaseSession(EntityManagerFactoryImpl.java:540)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:385)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:313)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.loadPU(PersistenceUnitLoader.java:199)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.<init>(PersistenceUnitLoader.java:107)
+	at org.glassfish.persistence.jpa.JPADeployer$1.visitPUD(JPADeployer.java:223)
+	at org.glassfish.persistence.jpa.JPADeployer$PersistenceUnitDescriptorIterator.iteratePUDs(JPADeployer.java:510)
+	at org.glassfish.persistence.jpa.JPADeployer.createEMFs(JPADeployer.java:230)
+	at org.glassfish.persistence.jpa.JPADeployer.prepare(JPADeployer.java:168)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.prepareModule(ApplicationLifecycle.java:925)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:434)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:534)
+	at com.sun.enterprise.v3.admin.AdminAdapter.onMissingResource(AdminAdapter.java:224)
+	at org.glassfish.grizzly.http.server.StaticHttpHandlerBase.service(StaticHttpHandlerBase.java:190)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:463)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:168)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:206)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:180)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:242)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:539)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.0.v20170811-d680af5): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+Error Code: 0
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:316)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:147)
+	at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:170)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:228)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:254)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:757)
+	... 51 more
+Caused by: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:121)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:135)
+	... 56 more
+Caused by: javax.resource.spi.ResourceAllocationException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:319)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:196)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:166)
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:115)
+	... 57 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:103)
+	at com.sun.enterprise.resource.pool.ConnectionPool.addResource(ConnectionPool.java:282)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResourceAndAddToPool(ConnectionPool.java:1511)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResources(ConnectionPool.java:943)
+	at com.sun.enterprise.resource.pool.ConnectionPool.initPool(ConnectionPool.java:230)
+	at com.sun.enterprise.resource.pool.ConnectionPool.internalGetResource(ConnectionPool.java:514)
+	at com.sun.enterprise.resource.pool.ConnectionPoo]]
+
+[2020-05-09T21:51:57.819+0500] [glassfish 5.0] [SEVERE] [] [] [tid: _ThreadID=46 _ThreadName=Thread-9] [timeMillis: 1589043117819] [levelValue: 1000] [[
+  l.getResource(ConnectionPool.java:381)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResourceFromPool(PoolManagerImpl.java:245)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResource(PoolManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.getResource(ConnectionManagerImpl.java:360)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:307)
+	... 61 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:923)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResource(ConnectionPool.java:1188)
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:98)
+	... 71 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.allocator.LocalTxConnectorAllocator.createResource(LocalTxConnectorAllocator.java:110)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:906)
+	... 73 more
+Caused by: javax.resource.spi.ResourceAllocationException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.gjc.spi.DMManagedConnectionFactory.createManagedConnection(DMManagedConnectionFactory.java:166)
+	at com.sun.enterprise.resource.allocator.LocalTxConnectorAllocator.createResource(LocalTxConnectorAllocator.java:87)
+	... 74 more
+]]
+
+[2020-05-09T21:51:57.820+0500] [glassfish 5.0] [SEVERE] [] [javax.enterprise.system.core] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117820] [levelValue: 1000] [[
+  Exception while preparing the app]]
+
+[2020-05-09T21:51:57.821+0500] [glassfish 5.0] [SEVERE] [NCLS-CORE-00026] [javax.enterprise.system.core] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117821] [levelValue: 1000] [[
+  Exception during lifecycle processing
+javax.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.0.v20170811-d680af5): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+Error Code: 0
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:844)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:216)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getDatabaseSession(EntityManagerFactoryDelegate.java:194)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.getDatabaseSession(EntityManagerFactoryImpl.java:540)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:385)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:313)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.loadPU(PersistenceUnitLoader.java:199)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.<init>(PersistenceUnitLoader.java:107)
+	at org.glassfish.persistence.jpa.JPADeployer$1.visitPUD(JPADeployer.java:223)
+	at org.glassfish.persistence.jpa.JPADeployer$PersistenceUnitDescriptorIterator.iteratePUDs(JPADeployer.java:510)
+	at org.glassfish.persistence.jpa.JPADeployer.createEMFs(JPADeployer.java:230)
+	at org.glassfish.persistence.jpa.JPADeployer.prepare(JPADeployer.java:168)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.prepareModule(ApplicationLifecycle.java:925)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:434)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:534)
+	at com.sun.enterprise.v3.admin.AdminAdapter.onMissingResource(AdminAdapter.java:224)
+	at org.glassfish.grizzly.http.server.StaticHttpHandlerBase.service(StaticHttpHandlerBase.java:190)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:463)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:168)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:206)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:180)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:242)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:539)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.0.v20170811-d680af5): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+Error Code: 0
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:316)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:147)
+	at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:170)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:228)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:254)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:757)
+	... 51 more
+Caused by: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:121)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:135)
+	... 56 more
+Caused by: javax.resource.spi.ResourceAllocationException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:319)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:196)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:166)
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:115)
+	... 57 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:103)
+	at com.sun.enterprise.resource.pool.ConnectionPool.addResource(ConnectionPool.java:282)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResourceAndAddToPool(ConnectionPool.java:1511)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResources(ConnectionPool.java:943)
+	at com.sun.enterprise.resource.pool.ConnectionPool.initPool(ConnectionPool.java:230)
+	at com.sun.enterprise.resource.pool.ConnectionPool.internalGetResource(ConnectionPool.java:514)
+	at com.sun.enterprise.resource.pool.ConnectionPool.getResource(ConnectionPool.java:381)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResourceFromPool(PoolManagerImpl.java:245)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResource(PoolManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.getResource(ConnectionManagerImpl.java:360)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:307)
+	... 61 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:923)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResource(ConnectionPool.java:1188)
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:98)
+	... 71 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.allocator.LocalTxConnectorAllocator.createResource(LocalTxConnectorAllocator.java:110)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:906)
+	... 73 more
+Caused by: javax.resource.spi.ResourceAllocationException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.gjc.spi.DMManagedConnectionFactory.createManagedConnection(DMManagedConnectionFactory.java:166)
+	at com.sun.enterprise.resource.allocator.LocalTxConnectorAllocator.createResource(LocalTxConnectorAllocator.java:87)
+	... 74 more
+]]
+
+[2020-05-09T21:51:57.831+0500] [glassfish 5.0] [SEVERE] [] [javax.enterprise.system.core] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043117831] [levelValue: 1000] [[
+  Exception while preparing the app : Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.0.v20170811-d680af5): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+Error Code: 0
+Local Exception Stack: 
+Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.0.v20170811-d680af5): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+Error Code: 0
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:316)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:147)
+	at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:170)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:228)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:804)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:254)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:757)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:216)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getDatabaseSession(EntityManagerFactoryDelegate.java:194)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.getDatabaseSession(EntityManagerFactoryImpl.java:540)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:385)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:313)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.loadPU(PersistenceUnitLoader.java:199)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.<init>(PersistenceUnitLoader.java:107)
+	at org.glassfish.persistence.jpa.JPADeployer$1.visitPUD(JPADeployer.java:223)
+	at org.glassfish.persistence.jpa.JPADeployer$PersistenceUnitDescriptorIterator.iteratePUDs(JPADeployer.java:510)
+	at org.glassfish.persistence.jpa.JPADeployer.createEMFs(JPADeployer.java:230)
+	at org.glassfish.persistence.jpa.JPADeployer.prepare(JPADeployer.java:168)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.prepareModule(ApplicationLifecycle.java:925)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:434)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:534)
+	at com.sun.enterprise.v3.admin.AdminAdapter.onMissingResource(AdminAdapter.java:224)
+	at org.glassfish.grizzly.http.server.StaticHttpHandlerBase.service(StaticHttpHandlerBase.java:190)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:463)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:168)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:206)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:180)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:242)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:539)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:121)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:135)
+	... 56 more
+Caused by: javax.resource.spi.ResourceAllocationException: Error in allocating a connection. Cause: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:319)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:196)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:166)
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:115)
+	... 57 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:103)
+	at com.sun.enterprise.resource.pool.ConnectionPool.addResource(ConnectionPool.java:282)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResourceAndAddToPool(ConnectionPool.java:1511)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResources(ConnectionPool.java:943)
+	at com.sun.enterprise.resource.pool.ConnectionPool.initPool(ConnectionPool.java:230)
+	at com.sun.enterprise.resource.pool.ConnectionPool.internalGetResource(ConnectionPool.java:514)
+	at com.sun.enterprise.resource.pool.ConnectionPool.getResource(ConnectionPool.java:381)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResourceFromPool(PoolManagerImpl.java:245)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResource(PoolManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.getResource(ConnectionManagerImpl.java:360)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:307)
+	... 61 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:923)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResource(ConnectionPool.java:1188)
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:98)
+	... 71 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.enterprise.resource.allocator.LocalTxConnectorAllocator.createResource(LocalTxConnectorAllocator.java:110)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:906)
+	... 73 more
+Caused by: javax.resource.spi.ResourceAllocationException: The connection could not be allocated: ВАЖНО: база данных "bd_KP" не существует
+	at com.sun.gjc.spi.DMManagedConnectionFactory.createManagedConnection(DMManagedConnectionFactory.java:166)
+	at com.sun.enterprise.resource.allocator.LocalTxConnectorAllocator.createResource(LocalTxConnectorAllocator.java:87)
+	... 74 more
+]]
+
+[2020-05-09T21:52:06.857+0500] [] [INFO] [NCLS-GFLAUNCHER-00005] [javax.enterprise.launcher] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1589043126857] [levelValue: 800] [[
+  JVM invocation command line:
+/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-0.fc32.x86_64/jre/bin/java
+-cp
+/home/Roman/Package/glassfish5/glassfish/modules/glassfish.jar
+-XX:+UnlockDiagnosticVMOptions
+-XX:NewRatio=2
+-XX:MaxPermSize=192m
+-Xmx512m
+-javaagent:/home/Roman/Package/glassfish5/glassfish/lib/monitor/flashlight-agent.jar
+-client
+-Djavax.xml.accessExternalSchema=all
+-Djavax.net.ssl.trustStore=/home/Roman/Package/glassfish5/glassfish/domains/domain1/config/cacerts.jks
+-Djdk.tls.rejectClientInitiatedRenegotiation=true
+-Djdk.corba.allowOutputStreamSubclass=true
+-Dfelix.fileinstall.dir=/home/Roman/Package/glassfish5/glassfish/modules/autostart/
+-Dorg.glassfish.additionalOSGiBundlesToStart=org.apache.felix.shell,org.apache.felix.gogo.runtime,org.apache.felix.gogo.shell,org.apache.felix.gogo.command,org.apache.felix.shell.remote,org.apache.felix.fileinstall
+-Dcom.sun.aas.installRoot=/home/Roman/Package/glassfish5/glassfish
+-Dfelix.fileinstall.poll=5000
+-Djava.endorsed.dirs=/home/Roman/Package/glassfish5/glassfish/modules/endorsed:/home/Roman/Package/glassfish5/glassfish/lib/endorsed
+-Djava.security.policy=/home/Roman/Package/glassfish5/glassfish/domains/domain1/config/server.policy
+-Dosgi.shell.telnet.maxconn=1
+-Dfelix.fileinstall.bundles.startTransient=true
+-Dcom.sun.enterprise.config.config_environment_factory_class=com.sun.enterprise.config.serverbeans.AppserverConfigEnvironmentFactory
+-Dfelix.fileinstall.log.level=2
+-Djavax.net.ssl.keyStore=/home/Roman/Package/glassfish5/glassfish/domains/domain1/config/keystore.jks
+-Djava.security.auth.login.config=/home/Roman/Package/glassfish5/glassfish/domains/domain1/config/login.conf
+-Dfelix.fileinstall.disableConfigSave=false
+-Dfelix.fileinstall.bundles.new.start=true
+-Dcom.sun.aas.instanceRoot=/home/Roman/Package/glassfish5/glassfish/domains/domain1
+-Dosgi.shell.telnet.port=6666
+-Dgosh.args=--nointeractive
+-Dcom.sun.enterprise.security.httpsOutboundKeyAlias=s1as
+-Dosgi.shell.telnet.ip=127.0.0.1
+-DANTLR_USE_DIRECT_CLASS_LOADING=true
+-Djava.awt.headless=true
+-Dcom.ctc.wstx.returnNullForDefaultNamespace=true
+-Djava.ext.dirs=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-0.fc32.x86_64/jre/lib/ext:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-0.fc32.x86_64/jre/jre/lib/ext:/home/Roman/Package/glassfish5/glassfish/domains/domain1/lib/ext
+-Djdbc.drivers=org.apache.derby.jdbc.ClientDriver
+-Djava.library.path=/home/Roman/Package/glassfish5/glassfish/lib:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+com.sun.enterprise.glassfish.bootstrap.ASMain
+-upgrade
+false
+-domaindir
+/home/Roman/Package/glassfish5/glassfish/domains/domain1
+-read-stdin
+true
+-asadmin-args
+--host,,,localhost,,,--port,,,4848,,,--secure=false,,,--terse=false,,,--echo=false,,,--interactive=false,,,start-domain,,,--verbose=false,,,--watchdog=false,,,--debug=false,,,--domaindir,,,/home/Roman/Package/glassfish5/glassfish/domains,,,domain1
+-domainname
+domain1
+-instancename
+server
+-type
+DAS
+-verbose
+false
+-asadmin-classpath
+/home/Roman/Package/glassfish5/glassfish/lib/client/appserver-cli.jar
+-debug
+false
+-asadmin-classname
+com.sun.enterprise.admin.cli.AdminMain]]
+
+[2020-05-09T21:52:21.726+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=143 _ThreadName=Thread-39] [timeMillis: 1589043141726] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:52:22.098+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=143 _ThreadName=Thread-39] [timeMillis: 1589043142098] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:52:22.118+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=143 _ThreadName=Thread-39] [timeMillis: 1589043142118] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:52:22.119+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=143 _ThreadName=Thread-39] [timeMillis: 1589043142119] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:52:23.255+0500] [glassfish 5.0] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=143 _ThreadName=Thread-39] [timeMillis: 1589043143255] [levelValue: 800] [[
+  Initializing Mojarra 2.3.2 ( 20170627-2139 e63598abf2ed2bb1a24674f308a734e0dce18a72) for context '']]
+
+[2020-05-09T21:52:24.384+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=143 _ThreadName=Thread-39] [timeMillis: 1589043144384] [levelValue: 800] [[
+  Loading application [__admingui] at [/]]]
+
+[2020-05-09T21:52:24.402+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00022] [javax.enterprise.system.core] [tid: _ThreadID=143 _ThreadName=Thread-39] [timeMillis: 1589043144402] [levelValue: 800] [[
+  Loading application __admingui done in 2 949 ms]]
+
+[2020-05-09T21:52:24.476+0500] [glassfish 5.0] [INFO] [NCLS-REST-00001] [javax.enterprise.admin.rest] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043144476] [levelValue: 800] [[
+  Listening to REST requests at context: /management/domain.]]
+
+[2020-05-09T21:52:24.915+0500] [glassfish 5.0] [WARNING] [] [javax.enterprise.system.container.web.com.sun.web.security] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043144915] [levelValue: 900] [[
+  Context path from ServletContext:  differs from path from bundle: /]]
+
+[2020-05-09T21:52:27.419+0500] [glassfish 5.0] [INFO] [] [org.glassfish.admingui] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043147419] [levelValue: 800] [[
+  Redirecting to &#x2f;]]
+
+[2020-05-09T21:52:27.627+0500] [glassfish 5.0] [INFO] [] [org.glassfish.admingui] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043147627] [levelValue: 800] [[
+  Admin Console: Initializing Session Attributes...]]
+
+[2020-05-09T21:53:17.486+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043197486] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:53:17.610+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043197610] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:53:17.679+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043197679] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:53:17.685+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043197685] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:53:17.860+0500] [glassfish 5.0] [INFO] [] [org.eclipse.persistence.session./file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043197860] [levelValue: 800] [[
+  EclipseLink, version: Eclipse Persistence Services - 2.7.0.v20170811-d680af5]]
+
+[2020-05-09T21:53:18.229+0500] [glassfish 5.0] [INFO] [] [org.eclipse.persistence.session./file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU.connection] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198229] [levelValue: 800] [[
+  /file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU login successful]]
+
+[2020-05-09T21:53:18.458+0500] [glassfish 5.0] [INFO] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198458] [levelValue: 800] [[
+  Portable JNDI names for EJB ProductFacade: [java:global/IgnashovRA/ProductFacade!Facades.ProductFacade, java:global/IgnashovRA/ProductFacade]]]
+
+[2020-05-09T21:53:18.471+0500] [glassfish 5.0] [INFO] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198471] [levelValue: 800] [[
+  Portable JNDI names for EJB PeopleFacade: [java:global/IgnashovRA/PeopleFacade!Facades.PeopleFacade, java:global/IgnashovRA/PeopleFacade]]]
+
+[2020-05-09T21:53:18.482+0500] [glassfish 5.0] [INFO] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198482] [levelValue: 800] [[
+  Portable JNDI names for EJB OrdersFacade: [java:global/IgnashovRA/OrdersFacade, java:global/IgnashovRA/OrdersFacade!Facades.OrdersFacade]]]
+
+[2020-05-09T21:53:18.574+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198574] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-09T21:53:18.580+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198580] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-09T21:53:18.589+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198589] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-09T21:53:18.592+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198592] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-09T21:53:18.599+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198599] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.600+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198600] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.608+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198608] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.609+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198609] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.610+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198610] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.617+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198617] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.618+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198618] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.619+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198619] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.621+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198621] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.622+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198622] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.623+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198623] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.624+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198624] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.626+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198626] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:53:18.938+0500] [glassfish 5.0] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198938] [levelValue: 800] [[
+  Initializing Soteria 1.0 for context '/IgnashovRA']]
+
+[2020-05-09T21:53:18.948+0500] [glassfish 5.0] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043198948] [levelValue: 800] [[
+  Initializing Mojarra 2.3.2 ( 20170627-2139 e63598abf2ed2bb1a24674f308a734e0dce18a72) for context '/IgnashovRA']]
+
+[2020-05-09T21:53:19.267+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043199267] [levelValue: 800] [[
+  Monitoring jndi:/server/IgnashovRA/WEB-INF/faces-config.xml for modifications]]
+
+[2020-05-09T21:53:19.332+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043199332] [levelValue: 800] [[
+  Loading application [IgnashovRA] at [/IgnashovRA]]]
+
+[2020-05-09T21:53:19.449+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=46 _ThreadName=admin-listener(1)] [timeMillis: 1589043199449] [levelValue: 800] [[
+  IgnashovRA was successfully deployed in 1 988 milliseconds.]]
+
+[2020-05-09T21:56:32.399+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.web.core] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043392399] [levelValue: 800] [[
+  Cannot serialize session attribute WELD_S&amp;&#x23;x23&#x3b;3 for session a5b3c21a67a6f12a073426aa3df7
+java.io.NotSerializableException: javax.faces.model.ListDataModel
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:2119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1140)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardManager.writeSessions(StandardManager.java:664)
+	at com.sun.enterprise.web.WebModule.saveSessions(WebModule.java:1579)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2196)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2152)
+	at com.sun.enterprise.web.WebApplication.stop(WebApplication.java:158)
+	at org.glassfish.internal.data.EngineRef.stop(EngineRef.java:161)
+	at org.glassfish.internal.data.ModuleInfo.stop(ModuleInfo.java:324)
+	at org.glassfish.internal.data.ApplicationInfo.stop(ApplicationInfo.java:380)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.unload(ApplicationLifecycle.java:1059)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.undeploy(ApplicationLifecycle.java:1099)
+	at org.glassfish.deployment.admin.UndeployCommand.execute(UndeployCommand.java:412)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at org.glassfish.deployment.admin.DeployCommand.handleRedeploy(DeployCommand.java:724)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:365)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at org.glassfish.deployment.admin.ReDeployCommand.execute(ReDeployCommand.java:131)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:534)
+	at com.sun.enterprise.v3.admin.AdminAdapter.onMissingResource(AdminAdapter.java:224)
+	at org.glassfish.grizzly.http.server.StaticHttpHandlerBase.service(StaticHttpHandlerBase.java:190)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:463)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:168)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:206)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:180)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:242)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:539)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-05-09T21:56:32.423+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.web.core] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043392423] [levelValue: 800] [[
+  Cannot serialize session attribute WELD_S&amp;&#x23;x23&#x3b;2 for session a5b3c21a67a6f12a073426aa3df7
+java.io.NotSerializableException: javax.faces.model.ListDataModel
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:2119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1140)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardManager.writeSessions(StandardManager.java:664)
+	at com.sun.enterprise.web.WebModule.saveSessions(WebModule.java:1579)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2196)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2152)
+	at com.sun.enterprise.web.WebApplication.stop(WebApplication.java:158)
+	at org.glassfish.internal.data.EngineRef.stop(EngineRef.java:161)
+	at org.glassfish.internal.data.ModuleInfo.stop(ModuleInfo.java:324)
+	at org.glassfish.internal.data.ApplicationInfo.stop(ApplicationInfo.java:380)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.unload(ApplicationLifecycle.java:1059)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.undeploy(ApplicationLifecycle.java:1099)
+	at org.glassfish.deployment.admin.UndeployCommand.execute(UndeployCommand.java:412)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at org.glassfish.deployment.admin.DeployCommand.handleRedeploy(DeployCommand.java:724)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:365)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at org.glassfish.deployment.admin.ReDeployCommand.execute(ReDeployCommand.java:131)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:534)
+	at com.sun.enterprise.v3.admin.AdminAdapter.onMissingResource(AdminAdapter.java:224)
+	at org.glassfish.grizzly.http.server.StaticHttpHandlerBase.service(StaticHttpHandlerBase.java:190)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:463)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:168)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:206)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:180)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:242)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:539)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-05-09T21:56:32.427+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.web.core] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043392427] [levelValue: 800] [[
+  Cannot serialize session attribute WELD_S&amp;&#x23;x23&#x3b;1 for session a5b3c21a67a6f12a073426aa3df7
+java.io.NotSerializableException: javax.faces.model.ListDataModel
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:2119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1140)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardManager.writeSessions(StandardManager.java:664)
+	at com.sun.enterprise.web.WebModule.saveSessions(WebModule.java:1579)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2196)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2152)
+	at com.sun.enterprise.web.WebApplication.stop(WebApplication.java:158)
+	at org.glassfish.internal.data.EngineRef.stop(EngineRef.java:161)
+	at org.glassfish.internal.data.ModuleInfo.stop(ModuleInfo.java:324)
+	at org.glassfish.internal.data.ApplicationInfo.stop(ApplicationInfo.java:380)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.unload(ApplicationLifecycle.java:1059)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.undeploy(ApplicationLifecycle.java:1099)
+	at org.glassfish.deployment.admin.UndeployCommand.execute(UndeployCommand.java:412)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at org.glassfish.deployment.admin.DeployCommand.handleRedeploy(DeployCommand.java:724)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:365)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at org.glassfish.deployment.admin.ReDeployCommand.execute(ReDeployCommand.java:131)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:534)
+	at com.sun.enterprise.v3.admin.AdminAdapter.onMissingResource(AdminAdapter.java:224)
+	at org.glassfish.grizzly.http.server.StaticHttpHandlerBase.service(StaticHttpHandlerBase.java:190)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:463)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:168)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:206)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:180)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:242)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:539)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-05-09T21:56:32.560+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.container.ejb.org.glassfish.ejb.startup] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043392560] [levelValue: 800] [[
+  keepstate options resolved to true, saving appId 104139527924678656 for application IgnashovRA.]]
+
+[2020-05-09T21:56:32.611+0500] [glassfish 5.0] [INFO] [] [org.eclipse.persistence.session./file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU.connection] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043392611] [levelValue: 800] [[
+  /file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU logout successful]]
+
+[2020-05-09T21:56:32.722+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043392722] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:56:32.771+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043392771] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:56:32.792+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043392792] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:56:32.797+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043392797] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-09T21:56:32.978+0500] [glassfish 5.0] [INFO] [] [org.eclipse.persistence.session./file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043392978] [levelValue: 800] [[
+  EclipseLink, version: Eclipse Persistence Services - 2.7.0.v20170811-d680af5]]
+
+[2020-05-09T21:56:33.005+0500] [glassfish 5.0] [INFO] [] [org.eclipse.persistence.session./file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU.connection] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393005] [levelValue: 800] [[
+  /file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU login successful]]
+
+[2020-05-09T21:56:33.036+0500] [glassfish 5.0] [INFO] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393036] [levelValue: 800] [[
+  Portable JNDI names for EJB PeopleFacade: [java:global/IgnashovRA/PeopleFacade!Facades.PeopleFacade, java:global/IgnashovRA/PeopleFacade]]]
+
+[2020-05-09T21:56:33.049+0500] [glassfish 5.0] [INFO] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393049] [levelValue: 800] [[
+  Portable JNDI names for EJB OrdersFacade: [java:global/IgnashovRA/OrdersFacade, java:global/IgnashovRA/OrdersFacade!Facades.OrdersFacade]]]
+
+[2020-05-09T21:56:33.062+0500] [glassfish 5.0] [INFO] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393062] [levelValue: 800] [[
+  Portable JNDI names for EJB ProductFacade: [java:global/IgnashovRA/ProductFacade!Facades.ProductFacade, java:global/IgnashovRA/ProductFacade]]]
+
+[2020-05-09T21:56:33.125+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393125] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-09T21:56:33.136+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393136] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-09T21:56:33.140+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393140] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-09T21:56:33.152+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393152] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-09T21:56:33.157+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393157] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.159+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393159] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.164+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393164] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.165+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393165] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.167+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393167] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.169+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393169] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.170+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393170] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.171+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393171] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.172+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393172] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.173+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393173] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.174+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393174] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.180+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393180] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.184+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393184] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-05-09T21:56:33.540+0500] [glassfish 5.0] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393540] [levelValue: 800] [[
+  Initializing Soteria 1.0 for context '/IgnashovRA']]
+
+[2020-05-09T21:56:33.549+0500] [glassfish 5.0] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393549] [levelValue: 800] [[
+  Initializing Mojarra 2.3.2 ( 20170627-2139 e63598abf2ed2bb1a24674f308a734e0dce18a72) for context '/IgnashovRA']]
+
+[2020-05-09T21:56:33.880+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393880] [levelValue: 800] [[
+  Monitoring jndi:/server/IgnashovRA/WEB-INF/faces-config.xml for modifications]]
+
+[2020-05-09T21:56:33.935+0500] [glassfish 5.0] [WARNING] [] [javax.enterprise.web] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393935] [levelValue: 900] [[
+  Unable to restore sessions for web module [/IgnashovRA] from previous deployment
+java.lang.ClassCastException: cannot assign instance of java.lang.String to field Controllers.ProductController.items of type javax.faces.model.DataModel in instance of Controllers.ProductController
+	at java.io.ObjectStreamClass$FieldReflector.setObjFieldValues(ObjectStreamClass.java:2287)
+	at java.io.ObjectStreamClass.setObjFieldValues(ObjectStreamClass.java:1417)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2293)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2211)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2069)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1573)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2287)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2211)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2069)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1573)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at org.apache.catalina.session.StandardSession.readRemainingObject(StandardSession.java:2002)
+	at org.apache.catalina.session.StandardSession.readObject(StandardSession.java:1910)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1170)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2178)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2069)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1573)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at org.apache.catalina.session.StandardSession.deserialize(StandardSession.java:1193)
+	at org.apache.catalina.session.StandardManager.readSessions(StandardManager.java:459)
+	at com.sun.enterprise.web.WebModule.loadSessions(WebModule.java:1611)
+	at com.sun.enterprise.web.WebContainer.loadWebModule(WebContainer.java:2046)
+	at com.sun.enterprise.web.WebContainer.loadWebModule(WebContainer.java:1690)
+	at com.sun.enterprise.web.WebApplication.start(WebApplication.java:107)
+	at org.glassfish.internal.data.EngineRef.start(EngineRef.java:122)
+	at org.glassfish.internal.data.ModuleInfo.start(ModuleInfo.java:291)
+	at org.glassfish.internal.data.ApplicationInfo.start(ApplicationInfo.java:352)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:500)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:219)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:491)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at org.glassfish.deployment.admin.ReDeployCommand.execute(ReDeployCommand.java:131)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:536)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:535)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:558)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:557)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1465)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:110)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1847)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1723)
+	at com.sun.enterprise.v3.admin.AdminAdapter.doCommand(AdminAdapter.java:534)
+	at com.sun.enterprise.v3.admin.AdminAdapter.onMissingResource(AdminAdapter.java:224)
+	at org.glassfish.grizzly.http.server.StaticHttpHandlerBase.service(StaticHttpHandlerBase.java:190)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:463)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:168)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:206)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:180)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:242)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:119)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:284)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:201)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:133)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:112)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:77)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:539)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:112)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:117)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:56)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:137)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:593)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:573)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-05-09T21:56:33.936+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393936] [levelValue: 800] [[
+  Loading application [IgnashovRA] at [/IgnashovRA]]]
+
+[2020-05-09T21:56:33.954+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=49 _ThreadName=admin-listener(4)] [timeMillis: 1589043393954] [levelValue: 800] [[
+  IgnashovRA was successfully deployed in 1 654 milliseconds.]]
+
+[2020-05-09T22:16:02.189+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00092] [javax.enterprise.system.core] [tid: _ThreadID=186 _ThreadName=Thread-52] [timeMillis: 1589044562189] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2020-05-09T22:16:02.208+0500] [glassfish 5.0] [INFO] [NCLS-BOOTSTRAP-00028] [javax.enterprise.bootstrap] [tid: _ThreadID=186 _ThreadName=Thread-52] [timeMillis: 1589044562208] [levelValue: 800] [[
+  Unregistered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@231baf51 from service registry.]]
+
+[2020-05-09T22:16:02.212+0500] [glassfish 5.0] [INFO] [] [] [tid: _ThreadID=186 _ThreadName=Thread-8] [timeMillis: 1589044562212] [levelValue: 800] [[
+  FileMonitoring shutdown]]
+
+[2020-05-09T22:16:02.249+0500] [glassfish 5.0] [INFO] [NCLS-JMX-00002] [javax.enterprise.system.jmx] [tid: _ThreadID=186 _ThreadName=Thread-52] [timeMillis: 1589044562249] [levelValue: 800] [[
+  JMXStartupService: Stopped JMXConnectorServer: null]]
+
+[2020-05-09T22:16:02.251+0500] [glassfish 5.0] [INFO] [NCLS-JMX-00001] [javax.enterprise.system.jmx] [tid: _ThreadID=186 _ThreadName=Thread-52] [timeMillis: 1589044562251] [levelValue: 800] [[
+  JMXStartupService and JMXConnectors have been shut down.]]
+
+[2020-05-09T22:16:02.414+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.web.core] [tid: _ThreadID=197 _ThreadName=RunLevelControllerThread-1589044562407] [timeMillis: 1589044562414] [levelValue: 800] [[
+  Cannot serialize session attribute WELD_S&amp;&#x23;x23&#x3b;3 for session a5e441daf3302049a3921976aa5d
+java.io.NotSerializableException: javax.faces.model.ListDataModel
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:2119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1140)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardManager.writeSessions(StandardManager.java:664)
+	at com.sun.enterprise.web.WebModule.saveSessions(WebModule.java:1579)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2196)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2152)
+	at com.sun.enterprise.web.WebApplication.stop(WebApplication.java:158)
+	at org.glassfish.internal.data.EngineRef.stop(EngineRef.java:161)
+	at org.glassfish.internal.data.ModuleInfo.stop(ModuleInfo.java:324)
+	at org.glassfish.internal.data.ApplicationInfo.stop(ApplicationInfo.java:380)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.unload(ApplicationLifecycle.java:1059)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:2127)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:113)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.stopApplication(ApplicationLoaderService.java:496)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.preDestroy(ApplicationLoaderService.java:464)
+	at org.jvnet.hk2.internal.ClazzCreator.preDestroyMe(ClazzCreator.java:340)
+	at org.jvnet.hk2.internal.ClazzCreator.dispose(ClazzCreator.java:405)
+	at org.jvnet.hk2.internal.SystemDescriptor.dispose(SystemDescriptor.java:542)
+	at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.destroyOne(AsyncRunLevelContext.java:427)
+	at org.glassfish.hk2.runlevel.RunLevelContext.destroyOne(RunLevelContext.java:105)
+	at org.jvnet.hk2.internal.ServiceHandleImpl.destroy(ServiceHandleImpl.java:189)
+	at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$DownQueueRunner.run(CurrentTaskFuture.java:1294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-05-09T22:16:02.461+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.web.core] [tid: _ThreadID=197 _ThreadName=RunLevelControllerThread-1589044562407] [timeMillis: 1589044562461] [levelValue: 800] [[
+  Cannot serialize session attribute WELD_S&amp;&#x23;x23&#x3b;2 for session a5e441daf3302049a3921976aa5d
+java.io.NotSerializableException: javax.faces.model.ListDataModel
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:2119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1140)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardManager.writeSessions(StandardManager.java:664)
+	at com.sun.enterprise.web.WebModule.saveSessions(WebModule.java:1579)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2196)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2152)
+	at com.sun.enterprise.web.WebApplication.stop(WebApplication.java:158)
+	at org.glassfish.internal.data.EngineRef.stop(EngineRef.java:161)
+	at org.glassfish.internal.data.ModuleInfo.stop(ModuleInfo.java:324)
+	at org.glassfish.internal.data.ApplicationInfo.stop(ApplicationInfo.java:380)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.unload(ApplicationLifecycle.java:1059)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:2127)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:113)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.stopApplication(ApplicationLoaderService.java:496)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.preDestroy(ApplicationLoaderService.java:464)
+	at org.jvnet.hk2.internal.ClazzCreator.preDestroyMe(ClazzCreator.java:340)
+	at org.jvnet.hk2.internal.ClazzCreator.dispose(ClazzCreator.java:405)
+	at org.jvnet.hk2.internal.SystemDescriptor.dispose(SystemDescriptor.java:542)
+	at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.destroyOne(AsyncRunLevelContext.java:427)
+	at org.glassfish.hk2.runlevel.RunLevelContext.destroyOne(RunLevelContext.java:105)
+	at org.jvnet.hk2.internal.ServiceHandleImpl.destroy(ServiceHandleImpl.java:189)
+	at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$DownQueueRunner.run(CurrentTaskFuture.java:1294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-05-09T22:16:02.468+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.web.core] [tid: _ThreadID=197 _ThreadName=RunLevelControllerThread-1589044562407] [timeMillis: 1589044562468] [levelValue: 800] [[
+  Cannot serialize session attribute WELD_S&amp;&#x23;x23&#x3b;1 for session a5e441daf3302049a3921976aa5d
+java.io.NotSerializableException: javax.faces.model.ListDataModel
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:2119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1140)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardManager.writeSessions(StandardManager.java:664)
+	at com.sun.enterprise.web.WebModule.saveSessions(WebModule.java:1579)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2196)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2152)
+	at com.sun.enterprise.web.WebApplication.stop(WebApplication.java:158)
+	at org.glassfish.internal.data.EngineRef.stop(EngineRef.java:161)
+	at org.glassfish.internal.data.ModuleInfo.stop(ModuleInfo.java:324)
+	at org.glassfish.internal.data.ApplicationInfo.stop(ApplicationInfo.java:380)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.unload(ApplicationLifecycle.java:1059)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:2127)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:113)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.stopApplication(ApplicationLoaderService.java:496)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.preDestroy(ApplicationLoaderService.java:464)
+	at org.jvnet.hk2.internal.ClazzCreator.preDestroyMe(ClazzCreator.java:340)
+	at org.jvnet.hk2.internal.ClazzCreator.dispose(ClazzCreator.java:405)
+	at org.jvnet.hk2.internal.SystemDescriptor.dispose(SystemDescriptor.java:542)
+	at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.destroyOne(AsyncRunLevelContext.java:427)
+	at org.glassfish.hk2.runlevel.RunLevelContext.destroyOne(RunLevelContext.java:105)
+	at org.jvnet.hk2.internal.ServiceHandleImpl.destroy(ServiceHandleImpl.java:189)
+	at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$DownQueueRunner.run(CurrentTaskFuture.java:1294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-05-09T22:16:02.596+0500] [glassfish 5.0] [INFO] [] [org.eclipse.persistence.session./file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU.connection] [tid: _ThreadID=197 _ThreadName=RunLevelControllerThread-1589044562407] [timeMillis: 1589044562596] [levelValue: 800] [[
+  /file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU logout successful]]
+
+[2020-05-09T22:16:02.632+0500] [glassfish 5.0] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=197 _ThreadName=RunLevelControllerThread-1589044562407] [timeMillis: 1589044562632] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@58d0d7c9]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@1e80d45f]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-05-09T22:16:02.638+0500] [glassfish 5.0] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=197 _ThreadName=RunLevelControllerThread-1589044562407] [timeMillis: 1589044562638] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@58d0d7c9]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@1e80d45f]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-05-09T22:16:02.638+0500] [glassfish 5.0] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=197 _ThreadName=RunLevelControllerThread-1589044562407] [timeMillis: 1589044562638] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@58d0d7c9]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@1e80d45f]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-05-09T22:16:02.639+0500] [glassfish 5.0] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=197 _ThreadName=RunLevelControllerThread-1589044562407] [timeMillis: 1589044562639] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@58d0d7c9]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@1e80d45f]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-05-09T22:16:02.639+0500] [glassfish 5.0] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=197 _ThreadName=RunLevelControllerThread-1589044562407] [timeMillis: 1589044562639] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@58d0d7c9]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@1e80d45f]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-05-09T22:16:02.671+0500] [glassfish 5.0] [INFO] [] [] [tid: _ThreadID=191 _ThreadName=Thread-8] [timeMillis: 1589044562671] [levelValue: 800] [[
+  JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]]]
+
+[2020-05-09T22:16:02.690+0500] [glassfish 5.0] [INFO] [ra.stop-successful] [javax.enterprise.resource.resourceadapter.com.sun.enterprise.connectors.service] [tid: _ThreadID=198 _ThreadName=Thread-63] [timeMillis: 1589044562690] [levelValue: 800] [[
+  RAR7094: __dm_jdbc_ra shutdown successful.]]
+
+[2020-05-19T21:44:14.490+0500] [glassfish 5.0] [INFO] [NCLS-LOGGING-00009] [javax.enterprise.logging] [tid: _ThreadID=21 _ThreadName=RunLevelControllerThread-1589906654294] [timeMillis: 1589906654490] [levelValue: 800] [[
+  Running GlassFish Version: GlassFish Server Open Source Edition  5.0.1  (build 5)]]
+
+[2020-05-19T21:44:14.492+0500] [glassfish 5.0] [INFO] [NCLS-LOGGING-00010] [javax.enterprise.logging] [tid: _ThreadID=21 _ThreadName=RunLevelControllerThread-1589906654294] [timeMillis: 1589906654492] [levelValue: 800] [[
+  Server log file is using Formatter class: com.sun.enterprise.server.logging.ODLLogFormatter]]
+
+[2020-05-19T21:44:14.622+0500] [glassfish 5.0] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=22 _ThreadName=RunLevelControllerThread-1589906654302] [timeMillis: 1589906654622] [levelValue: 800] [[
+  Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2020-05-19T21:44:14.624+0500] [glassfish 5.0] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=22 _ThreadName=RunLevelControllerThread-1589906654302] [timeMillis: 1589906654624] [levelValue: 800] [[
+  Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2020-05-19T21:44:14.630+0500] [glassfish 5.0] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=22 _ThreadName=RunLevelControllerThread-1589906654302] [timeMillis: 1589906654630] [levelValue: 800] [[
+  Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.]]
+
+[2020-05-19T21:44:15.190+0500] [glassfish 5.0] [INFO] [SEC-SVCS-00100] [javax.enterprise.security.services] [tid: _ThreadID=22 _ThreadName=RunLevelControllerThread-1589906654302] [timeMillis: 1589906655190] [levelValue: 800] [[
+  Authorization Service has successfully initialized.]]
+
+[2020-05-19T21:44:15.315+0500] [glassfish 5.0] [INFO] [] [org.glassfish.ha.store.spi.BackingStoreFactoryRegistry] [tid: _ThreadID=22 _ThreadName=RunLevelControllerThread-1589906654302] [timeMillis: 1589906655315] [levelValue: 800] [[
+  Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry]]
+
+[2020-05-19T21:44:15.378+0500] [glassfish 5.0] [INFO] [jts.startup_msg] [javax.enterprise.system.core.transaction.com.sun.jts.CosTransactions] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906655378] [levelValue: 800] [[
+  JTS5014: Recoverable JTS instance, serverId = [100]]]
+
+[2020-05-19T21:44:15.478+0500] [glassfish 5.0] [SEVERE] [NCLS-CORE-00043] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906655478] [levelValue: 1000] [[
+  Application previously deployed is not at its original location any more: file:/home/Roman/NetBeansProjects/testa/build/web/]]
+
+[2020-05-19T21:44:15.567+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=21 _ThreadName=RunLevelControllerThread-1589906654294] [timeMillis: 1589906655567] [levelValue: 800] [[
+  Grizzly Framework 2.4.3 started in: 41ms - bound to [/0.0.0.0:8080]]]
+
+[2020-05-19T21:44:15.709+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=21 _ThreadName=RunLevelControllerThread-1589906654294] [timeMillis: 1589906655709] [levelValue: 800] [[
+  Grizzly Framework 2.4.3 started in: 24ms - bound to [/0.0.0.0:8181]]]
+
+[2020-05-19T21:44:15.744+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=21 _ThreadName=RunLevelControllerThread-1589906654294] [timeMillis: 1589906655744] [levelValue: 800] [[
+  Grizzly Framework 2.4.3 started in: 9ms - bound to [/0.0.0.0:4848]]]
+
+[2020-05-19T21:44:15.939+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=21 _ThreadName=RunLevelControllerThread-1589906654294] [timeMillis: 1589906655939] [levelValue: 800] [[
+  Grizzly Framework 2.4.3 started in: 22ms - bound to [/0.0.0.0:3700]]]
+
+[2020-05-19T21:44:15.939+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906655939] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-19T21:44:16.682+0500] [glassfish 5.0] [INFO] [NCLS-SECURITY-01002] [javax.enterprise.system.core.security] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906656682] [levelValue: 800] [[
+  Java security manager is disabled.]]
+
+[2020-05-19T21:44:16.682+0500] [glassfish 5.0] [INFO] [NCLS-SECURITY-01010] [javax.enterprise.system.core.security] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906656682] [levelValue: 800] [[
+  Entering Security Startup Service.]]
+
+[2020-05-19T21:44:16.687+0500] [glassfish 5.0] [INFO] [NCLS-SECURITY-01143] [javax.enterprise.system.core.security] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906656687] [levelValue: 800] [[
+  Loading policy provider com.sun.enterprise.security.provider.PolicyWrapper.]]
+
+[2020-05-19T21:44:16.761+0500] [glassfish 5.0] [INFO] [NCLS-SECURITY-01011] [javax.enterprise.system.core.security] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906656761] [levelValue: 800] [[
+  Security Service(s) started successfully.]]
+
+[2020-05-19T21:44:17.166+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906657166] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2020-05-19T21:44:17.175+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906657175] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2020-05-19T21:44:17.178+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906657178] [levelValue: 800] [[
+  Created HTTP listener admin-listener on host/port 0.0.0.0:4848]]
+
+[2020-05-19T21:44:17.376+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00200] [javax.enterprise.web] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906657376] [levelValue: 800] [[
+  Created virtual server server]]
+
+[2020-05-19T21:44:17.379+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00200] [javax.enterprise.web] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906657379] [levelValue: 800] [[
+  Created virtual server __asadmin]]
+
+[2020-05-19T21:44:17.632+0500] [glassfish 5.0] [INFO] [AS-WEB-CORE-00306] [javax.enterprise.web.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906657632] [levelValue: 800] [[
+  Setting JAAS app name glassfish-web]]
+
+[2020-05-19T21:44:17.638+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00201] [javax.enterprise.web] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906657638] [levelValue: 800] [[
+  Virtual server server loaded default web module ]]
+
+[2020-05-19T21:44:18.607+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906658607] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-19T21:44:18.808+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906658808] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-19T21:44:18.833+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906658833] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-19T21:44:18.946+0500] [glassfish 5.0] [SEVERE] [AS-DEPLOYMENT-00026] [javax.enterprise.system.tools.deployment.dol] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906658946] [levelValue: 1000] [[
+  JNDI lookup failed for the resource: Name: MConstrPU, Lookup: java:app/MConstrDB, Type: javax.sql.DataSource.]]
+
+[2020-05-19T21:44:18.948+0500] [glassfish 5.0] [SEVERE] [] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906658948] [levelValue: 1000] [[
+  Exception while deploying the app [MConstr]]]
+
+[2020-05-19T21:44:18.949+0500] [glassfish 5.0] [SEVERE] [NCLS-CORE-00026] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906658949] [levelValue: 1000] [[
+  Exception during lifecycle processing
+org.glassfish.deployment.common.DeploymentException: JNDI lookup failed for the resource: Name: [MConstrPU], Lookup: [java:app/MConstrDB], Type: [javax.sql.DataSource]
+	at com.sun.enterprise.deployment.util.ResourceValidator.validateJNDIRefs(ResourceValidator.java:842)
+	at com.sun.enterprise.deployment.util.ResourceValidator.validateResources(ResourceValidator.java:716)
+	at com.sun.enterprise.deployment.util.ResourceValidator.event(ResourceValidator.java:133)
+	at org.glassfish.kernel.event.EventsImpl.send(EventsImpl.java:131)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.deploy(ApplicationLifecycle.java:423)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.processApplication(ApplicationLoaderService.java:406)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.postConstruct(ApplicationLoaderService.java:243)
+	at org.jvnet.hk2.internal.ClazzCreator.postConstructMe(ClazzCreator.java:327)
+	at org.jvnet.hk2.internal.ClazzCreator.create(ClazzCreator.java:375)
+	at org.jvnet.hk2.internal.SystemDescriptor.create(SystemDescriptor.java:487)
+	at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.findOrCreate(AsyncRunLevelContext.java:305)
+	at org.glassfish.hk2.runlevel.RunLevelContext.findOrCreate(RunLevelContext.java:89)
+	at org.jvnet.hk2.internal.Utilities.createService(Utilities.java:2126)
+	at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:116)
+	at org.jvnet.hk2.internal.ServiceHandleImpl.getService(ServiceHandleImpl.java:90)
+	at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$QueueRunner.oneJob(CurrentTaskFuture.java:1237)
+	at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$QueueRunner.run(CurrentTaskFuture.java:1168)
+	at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$UpOneLevel.run(CurrentTaskFuture.java:786)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.naming.NamingException: Lookup failed for 'java:app/MConstrDB' in SerialContext[myEnv={java.naming.factory.state=com.sun.corba.ee.impl.presentation.rmi.JNDIStateFactoryImpl, java.naming.factory.url.pkgs=com.sun.enterprise.naming} [Root exception is javax.naming.NamingException: Invocation exception: Got null ComponentInvocation ]
+	at com.sun.enterprise.naming.impl.SerialContext.lookup(SerialContext.java:491)
+	at com.sun.enterprise.naming.impl.SerialContext.lookup(SerialContext.java:438)
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+	at javax.naming.InitialContext.lookup(InitialContext.java:417)
+	at com.sun.enterprise.deployment.util.ResourceValidator.validateJNDIRefs(ResourceValidator.java:837)
+	... 20 more
+Caused by: javax.naming.NamingException: Invocation exception: Got null ComponentInvocation 
+	at com.sun.enterprise.naming.impl.GlassfishNamingManagerImpl.getComponentId(GlassfishNamingManagerImpl.java:842)
+	at com.sun.enterprise.naming.impl.GlassfishNamingManagerImpl.lookup(GlassfishNamingManagerImpl.java:714)
+	at com.sun.enterprise.naming.impl.JavaURLContext.lookup(JavaURLContext.java:167)
+	at com.sun.enterprise.naming.impl.SerialContext.lookup(SerialContext.java:471)
+	... 24 more
+]]
+
+[2020-05-19T21:44:19.004+0500] [glassfish 5.0] [SEVERE] [NCLS-CORE-00041] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906659004] [levelValue: 1000] [[
+  Application deployment failed: Exception while deploying the app [MConstr]]]
+
+[2020-05-19T21:44:19.006+0500] [glassfish 5.0] [SEVERE] [NCLS-CORE-00043] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906659006] [levelValue: 1000] [[
+  Application previously deployed is not at its original location any more: file:/home/Roman/NetBeansProjects/WebApplication1/build/web/]]
+
+[2020-05-19T21:44:19.047+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906659047] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-19T21:44:19.254+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906659254] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-19T21:44:19.285+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906659285] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-19T21:44:19.302+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906659302] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-19T21:44:19.453+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.system.tools.deployment.dol] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906659453] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-05-19T21:44:19.730+0500] [glassfish 5.0] [INFO] [] [org.hibernate.validator.internal.util.Version] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906659730] [levelValue: 800] [[
+  HV000001: Hibernate Validator 6.0.10.Final]]
+
+[2020-05-19T21:44:21.749+0500] [glassfish 5.0] [INFO] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906661749] [levelValue: 800] [[
+  Portable JNDI names for EJB OrdersFacade: [java:global/IgnashovRA/OrdersFacade, java:global/IgnashovRA/OrdersFacade!Facades.OrdersFacade]]]
+
+[2020-05-19T21:44:21.885+0500] [glassfish 5.0] [INFO] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906661885] [levelValue: 800] [[
+  Portable JNDI names for EJB ProductFacade: [java:global/IgnashovRA/ProductFacade!Facades.ProductFacade, java:global/IgnashovRA/ProductFacade]]]
+
+[2020-05-19T21:44:21.908+0500] [glassfish 5.0] [INFO] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906661908] [levelValue: 800] [[
+  Portable JNDI names for EJB PeopleFacade: [java:global/IgnashovRA/PeopleFacade!Facades.PeopleFacade, java:global/IgnashovRA/PeopleFacade]]]
+
+[2020-05-19T21:44:21.949+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Version] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906661949] [levelValue: 800] [[
+  WELD-000900: 3.0.0 (Final)]]
+
+[2020-05-19T21:44:22.572+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662572] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-19T21:44:22.579+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662579] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-19T21:44:22.590+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662590] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-19T21:44:22.597+0500] [glassfish 5.0] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662597] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-05-19T21:44:22.632+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662632] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.647+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662647] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.689+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662689] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.696+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662696] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.698+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662698] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.701+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662701] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.704+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662704] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.707+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662707] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.710+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662710] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.717+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662717] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.720+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662720] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.759+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662759] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:22.763+0500] [glassfish 5.0] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906662763] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-05-19T21:44:23.925+0500] [glassfish 5.0] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906663925] [levelValue: 800] [[
+  Initializing Soteria 1.0 for context '/IgnashovRA']]
+
+[2020-05-19T21:44:24.060+0500] [glassfish 5.0] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906664060] [levelValue: 800] [[
+  Initializing Mojarra 2.3.2 ( 20170627-2139 e63598abf2ed2bb1a24674f308a734e0dce18a72) for context '/IgnashovRA']]
+
+[2020-05-19T21:44:25.279+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906665279] [levelValue: 800] [[
+  Monitoring jndi:/server/IgnashovRA/WEB-INF/faces-config.xml for modifications]]
+
+[2020-05-19T21:44:25.363+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906665363] [levelValue: 800] [[
+  Loading application [IgnashovRA] at [/IgnashovRA]]]
+
+[2020-05-19T21:44:25.366+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00022] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906665366] [levelValue: 800] [[
+  Loading application IgnashovRA done in 6 359 ms]]
+
+[2020-05-19T21:44:25.368+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00017] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1589906665368] [levelValue: 800] [[
+  GlassFish Server Open Source Edition  5.0.1  (5) startup time : Felix (3 896ms), startup services(11 084ms), total(14 980ms)]]
+
+[2020-05-19T21:44:25.439+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1589906654292] [timeMillis: 1589906665439] [levelValue: 800] [[
+  Grizzly Framework 2.4.3 started in: 20ms - bound to [/0.0.0.0:7676]]]
+
+[2020-05-19T21:44:25.674+0500] [glassfish 5.0] [INFO] [NCLS-BOOTSTRAP-00027] [javax.enterprise.bootstrap] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1589906665674] [levelValue: 800] [[
+  Registered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@231baf51 as OSGi service registration: org.apache.felix.framework.ServiceRegistrationImpl@11841b15.]]
+
+[2020-05-19T21:44:25.871+0500] [glassfish 5.0] [INFO] [] [org.jvnet.hk2.osgiadapter] [tid: _ThreadID=18 _ThreadName=FelixStartLevel] [timeMillis: 1589906665871] [levelValue: 800] [[
+  Skipping registration of inhabitant for service reference [org.osgi.service.cm.ManagedService] as the service object could not be obtained.]]
+
+[2020-05-19T21:44:25.889+0500] [glassfish 5.0] [INFO] [] [org.jvnet.hk2.osgiadapter] [tid: _ThreadID=18 _ThreadName=FelixStartLevel] [timeMillis: 1589906665889] [levelValue: 800] [[
+  Skipping registration of inhabitant for service reference [org.osgi.service.metatype.MetaTypeProvider] as the service object could not be obtained.]]
+
+[2020-05-19T21:44:26.023+0500] [glassfish 5.0] [INFO] [NCLS-JMX-00005] [javax.enterprise.system.jmx] [tid: _ThreadID=77 _ThreadName=Thread-21] [timeMillis: 1589906666023] [levelValue: 800] [[
+  JMXStartupService has started JMXConnector on JMXService URL service:jmx:rmi://acer:8686/jndi/rmi://acer:8686/jmxrmi]]
+
+[2020-05-19T21:44:26.442+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=104 _ThreadName=pool-14-thread-1] [timeMillis: 1589906666442] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2020-05-19T21:44:26.476+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=104 _ThreadName=pool-14-thread-1] [timeMillis: 1589906666476] [levelValue: 800] [[
+  Grizzly Framework 2.4.3 started in: 1ms - bound to [/0.0.0.0:8181]]]
+
+[2020-05-19T21:44:26.678+0500] [glassfish 5.0] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=106 _ThreadName=pool-16-thread-1] [timeMillis: 1589906666678] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2020-05-19T21:44:26.708+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=106 _ThreadName=pool-16-thread-1] [timeMillis: 1589906666708] [levelValue: 800] [[
+  Grizzly Framework 2.4.3 started in: 3ms - bound to [/0.0.0.0:8080]]]
+
+[2020-05-19T21:45:12.909+0500] [glassfish 5.0] [INFO] [] [org.eclipse.persistence.session./file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU] [tid: _ThreadID=120 _ThreadName=http-listener-1(5)] [timeMillis: 1589906712909] [levelValue: 800] [[
+  EclipseLink, version: Eclipse Persistence Services - 2.7.0.v20170811-d680af5]]
+
+[2020-05-19T21:45:13.498+0500] [glassfish 5.0] [INFO] [] [org.eclipse.persistence.session./file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU.connection] [tid: _ThreadID=120 _ThreadName=http-listener-1(5)] [timeMillis: 1589906713498] [levelValue: 800] [[
+  /file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU login successful]]
+
+[2020-05-19T21:46:21.682+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00092] [javax.enterprise.system.core] [tid: _ThreadID=136 _ThreadName=Thread-39] [timeMillis: 1589906781682] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2020-05-19T21:46:21.699+0500] [glassfish 5.0] [INFO] [NCLS-BOOTSTRAP-00028] [javax.enterprise.bootstrap] [tid: _ThreadID=136 _ThreadName=Thread-39] [timeMillis: 1589906781699] [levelValue: 800] [[
+  Unregistered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@231baf51 from service registry.]]
+
+[2020-05-19T21:46:21.703+0500] [glassfish 5.0] [INFO] [] [] [tid: _ThreadID=136 _ThreadName=Thread-8] [timeMillis: 1589906781703] [levelValue: 800] [[
+  FileMonitoring shutdown]]
+
+[2020-05-19T21:46:21.733+0500] [glassfish 5.0] [INFO] [NCLS-CORE-00092] [javax.enterprise.system.core] [tid: _ThreadID=137 _ThreadName=Thread-40] [timeMillis: 1589906781733] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2020-05-19T21:46:21.756+0500] [glassfish 5.0] [INFO] [NCLS-JMX-00002] [javax.enterprise.system.jmx] [tid: _ThreadID=136 _ThreadName=Thread-39] [timeMillis: 1589906781756] [levelValue: 800] [[
+  JMXStartupService: Stopped JMXConnectorServer: null]]
+
+[2020-05-19T21:46:21.757+0500] [glassfish 5.0] [INFO] [NCLS-JMX-00001] [javax.enterprise.system.jmx] [tid: _ThreadID=136 _ThreadName=Thread-39] [timeMillis: 1589906781757] [levelValue: 800] [[
+  JMXStartupService and JMXConnectors have been shut down.]]
+
+[2020-05-19T21:46:21.973+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.web.core] [tid: _ThreadID=141 _ThreadName=RunLevelControllerThread-1589906781890] [timeMillis: 1589906781973] [levelValue: 800] [[
+  Cannot serialize session attribute WELD_S&amp;&#x23;x23&#x3b;3 for session dd36306cec79014cd3ef7ce1a413
+java.io.NotSerializableException: javax.faces.model.ListDataModel
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:2119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1140)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardManager.writeSessions(StandardManager.java:664)
+	at com.sun.enterprise.web.WebModule.saveSessions(WebModule.java:1579)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2196)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2152)
+	at com.sun.enterprise.web.WebApplication.stop(WebApplication.java:158)
+	at org.glassfish.internal.data.EngineRef.stop(EngineRef.java:161)
+	at org.glassfish.internal.data.ModuleInfo.stop(ModuleInfo.java:324)
+	at org.glassfish.internal.data.ApplicationInfo.stop(ApplicationInfo.java:380)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.unload(ApplicationLifecycle.java:1059)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:2127)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:113)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.stopApplication(ApplicationLoaderService.java:496)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.preDestroy(ApplicationLoaderService.java:464)
+	at org.jvnet.hk2.internal.ClazzCreator.preDestroyMe(ClazzCreator.java:340)
+	at org.jvnet.hk2.internal.ClazzCreator.dispose(ClazzCreator.java:405)
+	at org.jvnet.hk2.internal.SystemDescriptor.dispose(SystemDescriptor.java:542)
+	at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.destroyOne(AsyncRunLevelContext.java:427)
+	at org.glassfish.hk2.runlevel.RunLevelContext.destroyOne(RunLevelContext.java:105)
+	at org.jvnet.hk2.internal.ServiceHandleImpl.destroy(ServiceHandleImpl.java:189)
+	at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$DownQueueRunner.run(CurrentTaskFuture.java:1294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-05-19T21:46:21.992+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.web.core] [tid: _ThreadID=141 _ThreadName=RunLevelControllerThread-1589906781890] [timeMillis: 1589906781992] [levelValue: 800] [[
+  Cannot serialize session attribute WELD_S&amp;&#x23;x23&#x3b;2 for session dd36306cec79014cd3ef7ce1a413
+java.io.NotSerializableException: javax.faces.model.ListDataModel
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:2119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1140)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardManager.writeSessions(StandardManager.java:664)
+	at com.sun.enterprise.web.WebModule.saveSessions(WebModule.java:1579)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2196)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2152)
+	at com.sun.enterprise.web.WebApplication.stop(WebApplication.java:158)
+	at org.glassfish.internal.data.EngineRef.stop(EngineRef.java:161)
+	at org.glassfish.internal.data.ModuleInfo.stop(ModuleInfo.java:324)
+	at org.glassfish.internal.data.ApplicationInfo.stop(ApplicationInfo.java:380)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.unload(ApplicationLifecycle.java:1059)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:2127)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:113)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.stopApplication(ApplicationLoaderService.java:496)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.preDestroy(ApplicationLoaderService.java:464)
+	at org.jvnet.hk2.internal.ClazzCreator.preDestroyMe(ClazzCreator.java:340)
+	at org.jvnet.hk2.internal.ClazzCreator.dispose(ClazzCreator.java:405)
+	at org.jvnet.hk2.internal.SystemDescriptor.dispose(SystemDescriptor.java:542)
+	at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.destroyOne(AsyncRunLevelContext.java:427)
+	at org.glassfish.hk2.runlevel.RunLevelContext.destroyOne(RunLevelContext.java:105)
+	at org.jvnet.hk2.internal.ServiceHandleImpl.destroy(ServiceHandleImpl.java:189)
+	at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$DownQueueRunner.run(CurrentTaskFuture.java:1294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-05-19T21:46:21.994+0500] [glassfish 5.0] [INFO] [] [javax.enterprise.web.core] [tid: _ThreadID=141 _ThreadName=RunLevelControllerThread-1589906781890] [timeMillis: 1589906781994] [levelValue: 800] [[
+  Cannot serialize session attribute WELD_S&amp;&#x23;x23&#x3b;1 for session dd36306cec79014cd3ef7ce1a413
+java.io.NotSerializableException: javax.faces.model.ListDataModel
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1184)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1548)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1509)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardSession.writeObject(StandardSession.java:2119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1140)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1178)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:348)
+	at org.apache.catalina.session.StandardManager.writeSessions(StandardManager.java:664)
+	at com.sun.enterprise.web.WebModule.saveSessions(WebModule.java:1579)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2196)
+	at com.sun.enterprise.web.WebContainer.unloadWebModule(WebContainer.java:2152)
+	at com.sun.enterprise.web.WebApplication.stop(WebApplication.java:158)
+	at org.glassfish.internal.data.EngineRef.stop(EngineRef.java:161)
+	at org.glassfish.internal.data.ModuleInfo.stop(ModuleInfo.java:324)
+	at org.glassfish.internal.data.ApplicationInfo.stop(ApplicationInfo.java:380)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.unload(ApplicationLifecycle.java:1059)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:2127)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.disable(ApplicationLifecycle.java:113)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.stopApplication(ApplicationLoaderService.java:496)
+	at com.sun.enterprise.v3.server.ApplicationLoaderService.preDestroy(ApplicationLoaderService.java:464)
+	at org.jvnet.hk2.internal.ClazzCreator.preDestroyMe(ClazzCreator.java:340)
+	at org.jvnet.hk2.internal.ClazzCreator.dispose(ClazzCreator.java:405)
+	at org.jvnet.hk2.internal.SystemDescriptor.dispose(SystemDescriptor.java:542)
+	at org.glassfish.hk2.runlevel.internal.AsyncRunLevelContext.destroyOne(AsyncRunLevelContext.java:427)
+	at org.glassfish.hk2.runlevel.RunLevelContext.destroyOne(RunLevelContext.java:105)
+	at org.jvnet.hk2.internal.ServiceHandleImpl.destroy(ServiceHandleImpl.java:189)
+	at org.glassfish.hk2.runlevel.internal.CurrentTaskFuture$DownQueueRunner.run(CurrentTaskFuture.java:1294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-05-19T21:46:22.252+0500] [glassfish 5.0] [INFO] [] [org.eclipse.persistence.session./file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU.connection] [tid: _ThreadID=141 _ThreadName=RunLevelControllerThread-1589906781890] [timeMillis: 1589906782252] [levelValue: 800] [[
+  /file:/home/Roman/NetBeansProjects/IgnashovRA/build/web/WEB-INF/classes/_IgnashovRAPU logout successful]]
+
+[2020-05-19T21:46:22.389+0500] [glassfish 5.0] [INFO] [] [] [tid: _ThreadID=144 _ThreadName=Thread-8] [timeMillis: 1589906782389] [levelValue: 800] [[
+  JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]]]
+
+[2020-05-19T21:46:22.478+0500] [glassfish 5.0] [INFO] [ra.stop-successful] [javax.enterprise.resource.resourceadapter.com.sun.enterprise.connectors.service] [tid: _ThreadID=146 _ThreadName=Thread-48] [timeMillis: 1589906782478] [levelValue: 800] [[
+  RAR7094: __dm_jdbc_ra shutdown successful.]]
+

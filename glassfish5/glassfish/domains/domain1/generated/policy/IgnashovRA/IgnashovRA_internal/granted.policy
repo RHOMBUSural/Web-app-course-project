@@ -1,0 +1,34 @@
+/* AUTOMATICALLY GENERATED ON Sat May 09 21:56:33 YEKT 2020*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "PeopleFacade", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PeopleFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "ProductFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "PeopleFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "PeopleFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProductFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PeopleFacade", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "OrdersFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "OrdersFacade", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProductFacade", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "OrdersFacade", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "OrdersFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProductFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "PeopleFacade", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "ProductFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "ProductFacade", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "OrdersFacade", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PeopleFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "OrdersFacade", "findRangeOrders,Local,java.lang.Integer[]";
+  permission javax.security.jacc.EJBMethodPermission "OrdersFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "ProductFacade", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "OrdersFacade", "count,Local,";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "PeopleFacade", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "ProductFacade", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "OrdersFacade", "**";
+};
+

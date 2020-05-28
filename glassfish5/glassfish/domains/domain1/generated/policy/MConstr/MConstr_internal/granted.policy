@@ -1,0 +1,59 @@
+/* AUTOMATICALLY GENERATED ON Sat Apr 11 13:27:17 YEKT 2020*/
+/* DO NOT EDIT */
+
+grant {
+  permission javax.security.jacc.EJBMethodPermission "DefectsFacade", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "AssemblysFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "DeflectionsFacade", "findRangeDeflection,Local,float[]";
+  permission javax.security.jacc.EJBMethodPermission "DeflectionsFacade", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "DefectsFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PartsFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "AssemblysFacade", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "DeflectionsFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "StaffsFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "AssemblysFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StrainsFacade", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "StrainsFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "DeflectionsFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "PartsFacade", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PartsFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StaffsFacade", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "AssemblysFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "StrainsFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "StaffsFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "DefectsFacade", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "DefectsFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "PartsFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "DefectsFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "PartsFacade", "find,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "DefectsFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StaffsFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "PartsFacade", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "StaffsFacade", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "DeflectionsFacade", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "AssemblysFacade", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "DefectsFacade", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "StrainsFacade", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "PartsFacade", "remove,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "AssemblysFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "StrainsFacade", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "StrainsFacade", "findRange,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "StrainsFacade", "findAll,Local,";
+  permission javax.security.jacc.EJBMethodPermission "DeflectionsFacade", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "StaffsFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "StaffsFacade", "edit,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "AssemblysFacade", "create,Local,java.lang.Object";
+  permission javax.security.jacc.EJBMethodPermission "StrainsFacade", "findRangeStrain,Local,int[]";
+  permission javax.security.jacc.EJBMethodPermission "DeflectionsFacade", "count,Local,";
+  permission javax.security.jacc.EJBMethodPermission "DeflectionsFacade", "findAll,Local,";
+};
+
+grant      principal * * {
+  permission javax.security.jacc.EJBRoleRefPermission "PartsFacade", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "StaffsFacade", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "DefectsFacade", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "AssemblysFacade", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "StrainsFacade", "**";
+  permission javax.security.jacc.EJBRoleRefPermission "DeflectionsFacade", "**";
+};
+
